@@ -27,4 +27,16 @@
   #biliMainHeader {
     display: none;
   }
+
+  // 抽屉模式下处理页面抬升
+  .banner-wrapper,
+  .home-banner-wrapper {
+    margin-top: calc(-1 * var(--bew-top-bar-height)) !important;
+  }
+
+  // 抽屉模式网页全屏时不抬升页面
+  [data-screen="web"] .banner-wrapper,
+  [data-screen="web"] .home-banner-wrapper {
+    margin-top: 0 !important;
+  }
 }
